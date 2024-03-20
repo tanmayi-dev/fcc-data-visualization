@@ -13,3 +13,7 @@
 - `text()` :
   - This method either sets the text of the selected node, or gets the current text.
   - To set the value, you pass a string as an argument inside the parentheses of the method.
+- `selectAll()` :
+  - Method to select a group of elements.
+  - It returns an array of HTML nodes for all the items in the document that match the input string.
+  - It supports method chaining like `select()`
