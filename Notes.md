@@ -14,6 +14,8 @@
 - `text()` :
   - This method either sets the text of the selected node, or gets the current text.
   - To set the value, you pass a string as an argument inside the parentheses of the method.
+  - It can also take a callback function as an argument.
+  - `selection.text((d) => d)`
 - `selectAll()` :
   - Method to select a group of elements.
   - It returns an array of HTML nodes for all the items in the document that match the input string.
@@ -25,4 +27,6 @@
   - A common workflow pattern is to create a new element in the document for each piece of data in the set.
   - `enter()` is combined with the `data()` method, it looks at the selected elements fromt the page and compares them to the number of data items in the set.
   - If there are fewer elements than data items, it creates the missing elements.
--
+- `text()` for dynamic data:
+  - It can also take a callback function as an argument.
+  - `selection.text((d) => d)`
