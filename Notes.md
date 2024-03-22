@@ -29,4 +29,9 @@
   - If there are fewer elements than data items, it creates the missing elements.
 - `text()` for dynamic data:
   - It can also take a callback function as an argument.
-  - `selection.text((d) => d)`
+  - Example : `selection.text((d) => d)`
+- `style()` :
+  - D3 allows to add inline CSS styles on dynamic elements with this method.
+  - The `style()` method takes a comma-separated key-value pair as an argument.
+  - Example: `selection.style("color","blue");`
+  - Example: `selection.style("font-family","verdana");`
