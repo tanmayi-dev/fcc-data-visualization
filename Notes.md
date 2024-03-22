@@ -31,7 +31,17 @@
   - It can also take a callback function as an argument.
   - Example : `selection.text((d) => d)`
 - `style()` :
+
   - D3 allows to add inline CSS styles on dynamic elements with this method.
   - The `style()` method takes a comma-separated key-value pair as an argument.
   - Example: `selection.style("color","blue");`
   - Example: `selection.style("font-family","verdana");`
+  - To apply css properties conditionally on particular data, use a _a callback function_ in the `style()` method and include the conditional logic.
+  - The callback function uses the `d` parameter to represent the data point.
+  - Example:
+
+    ```js
+    selection.style("color". (d) => {
+
+    })
+    ```

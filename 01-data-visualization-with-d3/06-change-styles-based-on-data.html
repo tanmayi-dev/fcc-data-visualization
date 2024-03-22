@@ -1,0 +1,30 @@
+<!-- 
+  Task:
+  Add the style() method to the code in the editor to set the color of the h2 elements conditionally. Write the callback function so if the data value is less than 20, it returns red, otherwise it returns green.
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+  </head>
+  <body>
+    <script>
+      // Add your code below this line
+
+      const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9];
+
+      d3.select("body")
+        .selectAll("h2")
+        .data(dataset)
+        .enter()
+        .append("h2")
+        .text((d) => d + " USD")
+        .style("color", (d) => {
+          return d < 20 ? "red" : "green";
+        });
+
+      // Add your code above this line
+    </script>
+  </body>
+</html>
