@@ -65,3 +65,13 @@
   ```js
   selection.style("cssProperty", (d) => d);
   ```
+
+## SVG - Scalable Vector Graphics
+
+- SVG stands for Scalable Vector Graphics.
+
+- Here "scalable" means that, if you zoom in or out on an object, it would not appear pixelated. It scales with the display system, whether it's on a small mobile screen or a large TV monitor.
+
+- SVG is used to make common geometric shapes. Since D3 maps data into a visual representation, it uses SVG to create the shapes for the visualization. SVG shapes for a web page must go within an HTML `svg` tag.
+
+- CSS can be scalable when styles use relative units (such as `vh`, `vw`, or percentages), but using SVG is more flexible to build data visualizations.
