@@ -55,3 +55,13 @@
     selection.attr("class", "container");
     ```
   - Note that the `class` parameter will remain the same whenever you need to add a class and only the `container` parameter will change.
+
+### Creating Simple Bar Chart
+
+1. Create a `div` for each data point in the array
+2. Give each `div` a dynamic height, using a callback function in the `style()` methods that sets height equal to the data value
+
+- Example:
+  ```js
+  selection.style("cssProperty", (d) => d);
+  ```
