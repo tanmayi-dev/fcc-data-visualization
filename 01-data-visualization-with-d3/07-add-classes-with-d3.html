@@ -1,0 +1,35 @@
+<!-- 
+  Task:
+  Add the attr() method to the code in the editor and put a class of bar on the div elements.
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <style>
+      .bar {
+        width: 25px;
+        height: 100px;
+        display: inline-block;
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9];
+
+      // Add your code below this line
+
+      d3.select("body")
+        .selectAll("div")
+        .data(dataset)
+        .enter()
+        .append("div")
+        .attr("class", "bar");
+
+      // Add your code above this line
+    </script>
+  </body>
+</html>

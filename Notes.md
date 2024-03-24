@@ -45,3 +45,13 @@
 
     })
     ```
+
+- `attr()` :
+  - This method is used to add any HTML attribute to an element, including a class name.
+  - The `attr()` method works the same way that `style()` does.
+  - It takes comma-separated values, and use a callback function.
+  - Example to add a class of `container` to a selection:
+    ```js
+    selection.attr("class", "container");
+    ```
+  - Note that the `class` parameter will remain the same whenever you need to add a class and only the `container` parameter will change.
