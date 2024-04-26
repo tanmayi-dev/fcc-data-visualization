@@ -81,3 +81,5 @@
 - For example, a rectangle (`<rect>`) SVG shape could create a bar in a bar chart.
 
 - When you place a shape into the `svg` area, you can specify where it goes with `x` and `y` coordinates. The origin point of (0,0) is in the upper-left corner. Positive values for `x` push the shape to the right, and positive values for `y` push the shape down from the origin point.
+
+- The `rect` elements must be appended to an `svg` element, not directly to the `body`. To tell D3 where to place each `rect` within the `svg` area, define the `x` and `y` attributes
