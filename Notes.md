@@ -75,3 +75,9 @@
 - SVG is used to make common geometric shapes. Since D3 maps data into a visual representation, it uses SVG to create the shapes for the visualization. SVG shapes for a web page must go within an HTML `svg` tag.
 
 - CSS can be scalable when styles use relative units (such as `vh`, `vw`, or percentages), but using SVG is more flexible to build data visualizations.
+
+- Shapes in SVG : There are number of supported shapes in SVG, such as rectangles and circles. They are used to display data.
+
+- For example, a rectangle (`<rect>`) SVG shape could create a bar in a bar chart.
+
+- When you place a shape into the `svg` area, you can specify where it goes with `x` and `y` coordinates. The origin point of (0,0) is in the upper-left corner. Positive values for `x` push the shape to the right, and positive values for `y` push the shape down from the origin point.
