@@ -153,3 +153,11 @@ selection.attr("property", (d, i) => {});
 - Just like the `rect` y coordinate, the `cy` attribute for a `circle` is measured from the top of the SVG, not from the bottom.
 
 - All three attributes can use a callback function to set their values dynamically. Remember that all methods chained after `data(dataset)` run once per item in `dataset`. The `d` parameter in the callback function refers to the current item in `dataset`, which is an array for each point. You use bracket notation, like `d[0]`, to access the values in that array.
+
+### Add Labels to Scatter Plot Circles
+
+- You can add text to create labels for the points in a scatter plot.
+
+- The goal is to display the comma-separated values for the first (`x`) and second (`y`) fields of each item in dataset.
+
+- The `text` nodes need `x` and `y` attributes to position it on the SVG. In this challenge, the `y` value (which determines height) can use the same value that the `circle` uses for its `cy` attribute. The `x` value can be slightly larger than the `cx` value of the `circle`, so the label is visible. This will push the label to the right of the plotted point.
