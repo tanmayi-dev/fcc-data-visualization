@@ -137,3 +137,9 @@ selection.attr("property", (d, i) => {});
 - A tooltip shows more information about an item on a page when the user hovers over that item. There are several ways to add a tooltip to a visualization. This challenge uses the SVG `title` element.
 
 - `title` pairs with the `text()` method to dynamically add data to the bars.
+
+### Scatterplot with SVG Circles
+
+- A scatter plot is another type of visualization. It usually uses circles to map data points, which have two values each. These values tie to the `x` and `y` axes, and are used to position the circle in the visualization.
+
+- SVG has a `circle` tag to create the circle shape. It works a lot like the `rect` elements you used for the bar char
