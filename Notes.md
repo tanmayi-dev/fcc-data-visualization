@@ -131,3 +131,9 @@ selection.attr("property", (d, i) => {});
 - It's possible to add effects that highlight a bar when the user hovers over it with the mouse. So far, the styling for the rectangles is applied with the built-in D3 and SVG methods, but you can use CSS as well.
 
 - You set the CSS class on the SVG elements with the `attr()` method. Then the `:hover` pseudo-class for your new class holds the style rules for any hover effects.s
+
+### Add a Tooltip to a D3 element
+
+- A tooltip shows more information about an item on a page when the user hovers over that item. There are several ways to add a tooltip to a visualization. This challenge uses the SVG `title` element.
+
+- `title` pairs with the `text()` method to dynamically add data to the bars.
