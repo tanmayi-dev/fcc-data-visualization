@@ -143,3 +143,13 @@ selection.attr("property", (d, i) => {});
 - A scatter plot is another type of visualization. It usually uses circles to map data points, which have two values each. These values tie to the `x` and `y` axes, and are used to position the circle in the visualization.
 
 - SVG has a `circle` tag to create the circle shape. It works a lot like the `rect` elements you used for the bar char
+
+### Add Attributes to the Circle Elements
+
+- The last challenge created the `circle` elements for each point in the `dataset`, and appended them to the SVG. But D3 needs more information about the position and size of each `circle` to display them correctly.
+
+- A `circle` in SVG has three main attributes. The `cx` and `cy` attributes are the coordinates. They tell D3 where to position the center of the shape on the SVG. The radius (`r` attribute) gives the size of the `circle`.
+
+- Just like the `rect` y coordinate, the `cy` attribute for a `circle` is measured from the top of the SVG, not from the bottom.
+
+- All three attributes can use a callback function to set their values dynamically. Remember that all methods chained after `data(dataset)` run once per item in `dataset`. The `d` parameter in the callback function refers to the current item in `dataset`, which is an array for each point. You use bracket notation, like `d[0]`, to access the values in that array.
