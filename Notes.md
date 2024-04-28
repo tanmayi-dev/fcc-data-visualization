@@ -115,3 +115,11 @@ selection.attr("property", (d, i) => {});
 ### Change Color of SVG elements
 
 - In SVG, a `rect` shape is colored with the `fill` attribute. It supports hex codes, color names, and rgb values, as well as more complex options like gradients and transparency.
+
+### Add Labels to D3 Elements
+
+- D3 lets you label a graph element, such as a bar, using the SVG `text` element.
+
+- Like the `rect` element, a `text` element needs to have `x` and `y` attributes, to place it on the SVG. It also needs to access the data to display those values.
+
+- D3 gives you a high level of control over how you label your bars.
