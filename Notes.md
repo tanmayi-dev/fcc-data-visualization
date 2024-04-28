@@ -144,6 +144,8 @@ selection.attr("property", (d, i) => {});
 
 - SVG has a `circle` tag to create the circle shape. It works a lot like the `rect` elements you used for the bar char
 
+- Note: The circles won't be visible because we haven't set their attributes yet. We'll do that in the next challenge.
+
 ### Add Attributes to the Circle Elements
 
 - The last challenge created the `circle` elements for each point in the `dataset`, and appended them to the SVG. But D3 needs more information about the position and size of each `circle` to display them correctly.
@@ -179,3 +181,30 @@ const scale = d3.scaleLinear();
 ```
 
 - By default, a scale uses the identity relationship. The value of the input is the same as the value of the output. A separate challenge covers how to change this.
+
+### Set a Domain and Range on a Scale
+
+- By default, scales use the identity relationship. This means the input value maps to the output value. However, scales can be much more flexible and interesting.
+
+- Say a dataset has values ranging from 50 to 480. This is the input informations for a scale, also known as the _domain_.
+
+- You want to map those points along the `x` axis on the SVG, between 10 units and 500 units. This is the output information, also known as the _range_.
+
+- The `domain()` and `range()` methods set these values for the scale. Both methods take an array of at least two elements as an argument. Here's an example:
+
+```js
+scale.domain([50, 480]);
+scale.range([10, 500]);
+scale(50);
+scale(480);
+scale(325);
+scale(750);
+d3.scaleLinear();
+```
+
+- In order, the following values would be displayed in the console:
+  `10`, `500`, `323.37`, and `807.67`.
+
+- Notice that the scale uses the linear relationship between the domain and range values to figure out what the output should be for a given number. The minimum value in the domain (50) maps to the minimum value (10) in the range.
+
+- Note: You can chain the `domain()` and `range()` methods onto the `scale` variable.
