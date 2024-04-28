@@ -161,3 +161,21 @@ selection.attr("property", (d, i) => {});
 - The goal is to display the comma-separated values for the first (`x`) and second (`y`) fields of each item in dataset.
 
 - The `text` nodes need `x` and `y` attributes to position it on the SVG. In this challenge, the `y` value (which determines height) can use the same value that the `circle` uses for its `cy` attribute. The `x` value can be slightly larger than the `cx` value of the `circle`, so the label is visible. This will push the label to the right of the plotted point.
+
+## Scales - Linear Scale with D3
+
+- The bar and scatter plot charts both plotted data directly onto the SVG. However, if the height of a bar or one of the data points were larger than the SVG height or width values, it would go outside the SVG area.
+
+- In D3, there are scales to help plot data. `scales` are functions that tell the program how to map a set of raw data points onto the pixels of the SVG.
+
+- For example, say you have a 100x500-sized SVG and you want to plot Gross Domestic Product (GDP) for a number of countries. The set of numbers would be in the billion or trillion-dollar range. You provide D3 a type of scale to tell it how to place the large GDP values into that 100x500-sized area.
+
+- It's unlikely you would plot raw data as-is. Before plotting it, you set the scale for your entire data set, so that the `x` and `y` values fit your SVG width and height.
+
+- D3 has several scale types. For a linear scale (usually used with quantitative data), there is the D3 method `scaleLinear()`:
+
+```js
+const scale = d3.scaleLinear();
+```
+
+- By default, a scale uses the identity relationship. The value of the input is the same as the value of the output. A separate challenge covers how to change this.
